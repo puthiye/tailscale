@@ -4,7 +4,7 @@ Each tailscale client talks to what we call a “coordination server” (in our 
 
 Here’s what happens:
 
-- Each node generates a random public/private keypair for itself, and associates the public key with its identity (see login, below).
+- Each node generates a random public/private keypair for itself, and associates the public key with its identity.
 - The node contacts the coordination server and leaves its public key and a note about where that node can currently be found, and what domain it’s in.
 - The node downloads a list of public keys and addresses in its domain, which have been left on the coordination server by other nodes.
 - The node configures its WireGuard instance with the appropriate set of public keys.
